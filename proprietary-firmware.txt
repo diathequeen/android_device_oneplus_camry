@@ -1,0 +1,20 @@
+## All proprietary files from this list are from camry CPH2619_16.0.5.1000(EX01)
+
+abl.img;AB
+bluetooth.img;AB
+devcfg.img;AB
+dsp.img;AB
+engineering_cdt.img;AB
+featenabler.img;AB
+hyp.img;AB
+imagefv.img;AB
+keymaster.img;AB
+oplus_sec.img;AB
+oplusstanvbk.img;AB
+qupfw.img;AB
+rpm.img;AB
+splash.img;AB
+tz.img;AB
+uefisecapp.img;AB
+xbl.img;AB
+xbl_config.img;AB
