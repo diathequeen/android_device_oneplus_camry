@@ -22,4 +22,4 @@ Display | 1080 x 2400 pixels, 20:9 ratio, 6.67 inches, AMOLED 120Hz (~395 ppi de
 
 ## Device picture
 
-![OnePlus Nord CE4 Lite 5G](https://www.phoneplacekenya.com/product/oneplus-nord-ce4-lite/)
+![OnePlus Nord CE4 Lite 5G](https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-nord-ce4-lite-intl-1.jpg)
