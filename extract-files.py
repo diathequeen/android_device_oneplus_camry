@@ -13,7 +13,7 @@ namespace_imports = [
     'device/oneplus/camry',
     'hardware/qcom-caf/sm6375'
     'hardware/qcom-caf/wlan'
-    'hardware/oplus'
+    'hardware/oneplus'
 ]
 
 module = ExtractUtilsModule(
