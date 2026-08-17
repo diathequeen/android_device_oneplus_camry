@@ -13,7 +13,7 @@ namespace_imports = [
     'vendor/oneplus/camry',
     'vendor/qcom/opensource/display',
     'hardware/qcom-caf/wlan',
-    'hardware/qcom-caf/sm6375-blair',
+    'hardware/qcom-caf/sm6375-6.1',
     'hardware/oneplus',
 ]
 

@@ -1,0 +1,710 @@
+❯ readelf -s ~/vendor_dlkm/lib/modules/oplus_bsp_uff_fp_driver.ko | grep UND
+     0: 0000000000000000     0 NOTYPE  LOCAL  DEFAULT  UND
+   434: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND memset
+   436: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND init_wait_entry
+   438: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND prepare_to_wait_event
+   439: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND schedule
+   440: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND finish_wait
+   441: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND _printk
+   442: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND __stack_chk_fail
+   444: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND proc_create
+   449: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND memcpy
+   450: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND __wake_up
+   451: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND alt_cb_patch_nops
+   452: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND gic_nonsecure_pr[...]
+   453: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND __arch_copy_to_user
+   454: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND cpu_hwcaps
+   457: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND kfree_skb_reason
+   458: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND refcount_warn_sa[...]
+   462: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND jiffies_to_msecs
+   463: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND pm_wakeup_ws_event
+   469: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND __register_chrdev
+   471: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND __class_create
+   472: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND __unregister_chrdev
+   473: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND __platform_drive[...]
+   474: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND class_destroy
+   476: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND platform_driver_[...]
+   478: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND gpio_to_desc
+   479: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND gpiod_set_raw_value
+   480: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND __arch_copy_from_user
+   488: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND __pm_relax
+   491: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND input_event
+   492: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND mutex_lock
+   493: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND nonseekable_open
+   496: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND request_threaded_irq
+   497: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND irq_set_irq_wake
+   498: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND of_find_node_by_name
+   499: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND mutex_unlock
+   500: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND of_count_phandle[...]
+   501: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND __of_parse_phand[...]
+   502: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND of_drm_find_panel
+   503: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND msleep
+   504: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND panel_event_noti[...]
+   505: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND disable_irq
+   506: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND free_irq
+   508: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND __const_udelay
+   509: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND enable_irq
+   510: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND touchpanel_event[...]
+   511: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND gpiod_get_raw_value
+   512: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND thermal_zone_get[...]
+   513: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND thermal_zone_get_temp
+   514: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND power_supply_get[...]
+   515: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND power_supply_get[...]
+   516: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND power_supply_put
+   517: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND device_create
+   518: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND touchpanel_event[...]
+   519: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND wakeup_source_add
+   520: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND __list_add_valid
+   521: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND input_allocate_device
+   523: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND input_set_capability
+   524: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND input_register_device
+   525: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND input_free_device
+   526: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND __list_del_entry[...]
+   527: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND device_destroy
+   528: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND wakeup_source_remove
+   529: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND touchpanel_event[...]
+   530: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND panel_event_noti[...]
+   531: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND input_unregister[...]
+   534: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND olc_raise_exception
+   535: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND ktime_get_real_ts64
+   536: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND __alloc_skb
+   537: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND __nlmsg_put
+   538: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND netlink_unicast
+   539: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND init_net
+   540: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND __netlink_kernel[...]
+   541: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND netlink_kernel_r[...]
+   543: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND gpio_free
+   545: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND of_get_next_avai[...]
+   546: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND of_property_read[...]
+   547: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND of_property_read[...]
+   548: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND of_property_coun[...]
+   549: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND of_property_read[...]
+   550: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND of_get_named_gpi[...]
+   551: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND devm_gpio_request
+   552: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND gpiod_direction_[...]
+   559: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND gpiod_direction_input
+   560: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND devm_gpiod_put
+   561: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND regulator_get
+   562: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND regulator_is_enabled
+   563: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND regulator_count_[...]
+   564: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND regulator_set_voltage
+   565: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND regulator_set_load
+   566: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND regulator_enable
+   567: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND regulator_put
+   568: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND regulator_disable
+   569: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND gpiod_to_irq
+
+~
+❯ adb shell dmesg | grep -i "uff_fp\|unknown symbol\|olc"
+* daemon not running; starting now at tcp:5037
+* daemon started successfully
+[19038.492642] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19038.692062] oplus_bsp_uff_fp_driver: gf_read enter
+[19038.692079] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19041.048420] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19041.228809] oplus_bsp_uff_fp_driver: gf_read enter
+[19041.228823] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19047.974956] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19048.166449] oplus_bsp_uff_fp_driver: gf_read enter
+[19048.166469] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19048.359853] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19048.596052] oplus_bsp_uff_fp_driver: gf_read enter
+[19048.596070] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19055.826259] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19056.023790] oplus_bsp_uff_fp_driver: gf_read enter
+[19056.023811] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19063.280023] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19063.488364] oplus_bsp_uff_fp_driver: gf_read enter
+[19063.488386] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19071.076964] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19071.246679] oplus_bsp_uff_fp_driver: gf_read enter
+[19071.246700] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19071.439873] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19071.653820] oplus_bsp_uff_fp_driver: gf_read enter
+[19071.653835] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19071.831434] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19071.866958] oplus_bsp_uff_fp_driver: gf_read enter
+[19071.866977] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19072.200261] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19072.360538] oplus_bsp_uff_fp_driver: gf_read enter
+[19072.360556] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19072.563976] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19072.780881] oplus_bsp_uff_fp_driver: gf_read enter
+[19072.780899] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19074.035289] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19074.244869] oplus_bsp_uff_fp_driver: gf_read enter
+[19074.244886] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19074.427269] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19074.648309] oplus_bsp_uff_fp_driver: gf_read enter
+[19074.648329] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19074.837662] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19075.060640] oplus_bsp_uff_fp_driver: gf_read enter
+[19075.060656] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19081.794988] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19081.996709] oplus_bsp_uff_fp_driver: gf_read enter
+[19081.996729] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19082.283533] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19082.463327] oplus_bsp_uff_fp_driver: gf_read enter
+[19082.463343] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19082.660951] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19082.831778] oplus_bsp_uff_fp_driver: gf_read enter
+[19082.831797] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19083.116154] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19083.278437] oplus_bsp_uff_fp_driver: gf_read enter
+[19083.278454] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19083.466635] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19083.676410] oplus_bsp_uff_fp_driver: gf_read enter
+[19083.676430] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19083.862573] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19084.094177] oplus_bsp_uff_fp_driver: gf_read enter
+[19084.094195] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19084.282635] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19084.495243] oplus_bsp_uff_fp_driver: gf_read enter
+[19084.495260] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19091.248016] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19091.472339] oplus_bsp_uff_fp_driver: gf_read enter
+[19091.472361] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19091.667438] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19091.878419] oplus_bsp_uff_fp_driver: gf_read enter
+[19091.878436] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19099.287072] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19099.468006] oplus_bsp_uff_fp_driver: gf_read enter
+[19099.468048] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19099.746799] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19099.954726] oplus_bsp_uff_fp_driver: gf_read enter
+[19099.954743] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19100.141613] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19100.334280] oplus_bsp_uff_fp_driver: gf_read enter
+[19100.334298] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19113.148104] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19113.362342] oplus_bsp_uff_fp_driver: gf_read enter
+[19113.362362] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19113.561781] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19113.764658] oplus_bsp_uff_fp_driver: gf_read enter
+[19113.764679] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19113.946091] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19114.166493] oplus_bsp_uff_fp_driver: gf_read enter
+[19114.166515] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19115.403385] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19115.614957] oplus_bsp_uff_fp_driver: gf_read enter
+[19115.614976] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19115.788273] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19115.823617] oplus_bsp_uff_fp_driver: gf_read enter
+[19115.823638] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19116.140139] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19116.341558] oplus_bsp_uff_fp_driver: gf_read enter
+[19116.341588] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19116.540393] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19116.749416] oplus_bsp_uff_fp_driver: gf_read enter
+[19116.749436] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19116.937441] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19117.147194] oplus_bsp_uff_fp_driver: gf_read enter
+[19117.147213] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19117.330289] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19117.550843] oplus_bsp_uff_fp_driver: gf_read enter
+[19117.550860] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19117.740032] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19117.931810] oplus_bsp_uff_fp_driver: gf_read enter
+[19117.931967] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19118.113114] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19118.153287] oplus_bsp_uff_fp_driver: gf_read enter
+[19118.153306] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19118.427904] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19118.641548] oplus_bsp_uff_fp_driver: gf_read enter
+[19118.641565] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19120.959857] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19121.184464] oplus_bsp_uff_fp_driver: gf_read enter
+[19121.184492] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19121.378977] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19121.605287] oplus_bsp_uff_fp_driver: gf_read enter
+[19121.605303] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19122.879603] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19123.042143] oplus_bsp_uff_fp_driver: gf_read enter
+[19123.042167] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19123.230055] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19123.272772] oplus_bsp_uff_fp_driver: gf_read enter
+[19123.272793] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19123.547555] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19123.761125] oplus_bsp_uff_fp_driver: gf_read enter
+[19123.761146] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19126.068542] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19126.268434] oplus_bsp_uff_fp_driver: gf_read enter
+[19126.268452] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19128.700781] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19128.946264] oplus_bsp_uff_fp_driver: gf_read enter
+[19128.946284] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19129.140023] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19129.300133] oplus_bsp_uff_fp_driver: gf_read enter
+[19129.300150] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19129.478096] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19129.540325] oplus_bsp_uff_fp_driver: gf_read enter
+[19129.540333] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19129.781157] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19129.832645] oplus_bsp_uff_fp_driver: gf_read enter
+[19129.832666] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19130.320859] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19130.529483] oplus_bsp_uff_fp_driver: gf_read enter
+[19130.529504] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19130.731419] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19130.951032] oplus_bsp_uff_fp_driver: gf_read enter
+[19130.951050] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19131.190040] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19131.394097] oplus_bsp_uff_fp_driver: gf_read enter
+[19131.394115] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19131.686961] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19131.883462] oplus_bsp_uff_fp_driver: gf_read enter
+[19131.883480] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19138.887324] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19139.090382] oplus_bsp_uff_fp_driver: gf_read enter
+[19139.090402] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19146.031837] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19146.226478] oplus_bsp_uff_fp_driver: gf_read enter
+[19146.226494] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19147.480585] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19147.660401] oplus_bsp_uff_fp_driver: gf_read enter
+[19147.660423] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19147.850361] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19148.061733] oplus_bsp_uff_fp_driver: gf_read enter
+[19148.061774] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19148.249848] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19148.443053] oplus_bsp_uff_fp_driver: gf_read enter
+[19148.443070] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19148.715147] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19148.924246] oplus_bsp_uff_fp_driver: gf_read enter
+[19148.924266] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19149.115475] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19149.338680] oplus_bsp_uff_fp_driver: gf_read enter
+[19149.338696] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19151.614186] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19151.860866] oplus_bsp_uff_fp_driver: gf_read enter
+[19151.860885] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19152.032607] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19152.074868] oplus_bsp_uff_fp_driver: gf_read enter
+[19152.074899] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19152.401345] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19152.616475] oplus_bsp_uff_fp_driver: gf_read enter
+[19152.616495] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19153.873246] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19154.079287] oplus_bsp_uff_fp_driver: gf_read enter
+[19154.079307] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19156.361136] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19156.562327] oplus_bsp_uff_fp_driver: gf_read enter
+[19156.562349] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19156.758206] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19156.981847] oplus_bsp_uff_fp_driver: gf_read enter
+[19156.981864] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19164.480290] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19164.566950] oplus_bsp_uff_fp_driver: gf_read enter
+[19164.566970] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19166.569193] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19166.727706] oplus_bsp_uff_fp_driver: gf_read enter
+[19166.727726] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19169.071263] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19169.321374] oplus_bsp_uff_fp_driver: gf_read enter
+[19169.321393] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19169.516675] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19169.732518] oplus_bsp_uff_fp_driver: gf_read enter
+[19169.732540] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19169.920478] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19170.111919] oplus_bsp_uff_fp_driver: gf_read enter
+[19170.111938] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19170.297497] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19170.487627] oplus_bsp_uff_fp_driver: gf_read enter
+[19170.487650] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19170.949868] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19171.138643] oplus_bsp_uff_fp_driver: gf_read enter
+[19171.138663] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19173.464891] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19173.641780] oplus_bsp_uff_fp_driver: gf_read enter
+[19173.641801] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19174.901834] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19175.137201] oplus_bsp_uff_fp_driver: gf_read enter
+[19175.137222] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19175.316950] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19175.513369] oplus_bsp_uff_fp_driver: gf_read enter
+[19175.513388] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19184.756699] oplus_bsp_uff_fp_driver: recv tp event:1
+[19184.756722] oplus_bsp_uff_fp_driver: sizeof(struct touchpanel_event) =64, sizeof(tp2fp_touchpanel_event_t) =64, tp_info->touch_state =1, tp_info->x=4555, tp_info->y=17015, tp_firmware_time=0
+[19184.756729] oplus_bsp_uff_fp_driver: touch_early_down_flag = 0, is_touch_fp_area_cnt = 0, fp_down_time 0, touch_fp_area_time 0
+[19184.756742] oplus_bsp_uff_fp_driver: oplus_tp_notifier_call touch down touchdown
+[19184.756748] oplus_bsp_uff_fp_driver: send_fingerprint_msg, module:0, event:4
+[19184.756866] oplus_bsp_uff_fp_driver: end wait for driver event
+[19184.757543] oplus_bsp_uff_fp_driver: gf_read enter
+[19184.757553] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19184.758935] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_LHBM_TEMPERATURE
+[19184.758948] oplus_bsp_uff_fp_driver: enter local_hbm_get_temperature
+[19184.758977] oplus_bsp_uff_fp_driver: local_hbm_get_temperature, 0 : shell_temp = 30311
+[19184.758982] oplus_bsp_uff_fp_driver: local_hbm_get_temperature, 1 : shell_temp = 28165
+[19184.758986] oplus_bsp_uff_fp_driver: local_hbm_get_temperature, 2 : shell_temp = 28961
+[19184.758987] oplus_bsp_uff_fp_driver: exit local_hbm_get_temperature, min_shell_temp = 28165
+[19184.759509] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19184.793548] oplus_bsp_uff_fp_driver: [fp_panel_notifier_callback] UI ready
+[19184.793565] oplus_bsp_uff_fp_driver: send_fingerprint_msg, module:1, event:6
+[19184.793633] oplus_bsp_uff_fp_driver: end wait for driver event
+[19184.794040] oplus_bsp_uff_fp_driver: gf_read enter
+[19184.794047] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19184.817978] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19184.834380] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19184.890267] oplus_bsp_uff_fp_driver: unknow module, ignored
+[19184.890278] oplus_bsp_uff_fp_driver: send_fingerprint_msg, module:3, event:1
+[19184.890343] oplus_bsp_uff_fp_driver: end wait for driver event
+[19184.890610] oplus_bsp_uff_fp_driver: gf_read enter
+[19184.890615] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19184.925520] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19184.926657] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19184.957350] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19184.957620] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19184.975402] oplus_bsp_uff_fp_driver: unknow module, ignored
+[19184.975520] oplus_bsp_uff_fp_driver: send_fingerprint_msg, module:3, event:1
+[19184.976024] oplus_bsp_uff_fp_driver: end wait for driver event
+[19184.977277] oplus_bsp_uff_fp_driver: gf_read enter
+[19184.977326] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19185.004383] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19185.004994] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19185.005706] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19185.005831] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19185.028060] oplus_bsp_uff_fp_driver: [fp_panel_notifier_callback] UI disappear
+[19185.028074] oplus_bsp_uff_fp_driver: send_fingerprint_msg, module:1, event:7
+[19185.029966] oplus_bsp_uff_fp_driver: end wait for driver event
+[19185.031253] oplus_bsp_uff_fp_driver: gf_read enter
+[19185.031270] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19185.180706] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19185.180780] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_BATT_TEMPERATURE
+[19185.180792] oplus_bsp_uff_fp_driver: get_battery_temperature_dgr, get battery temp = 30
+[19185.180830] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19185.271501] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19185.271800] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19185.343749] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19185.347399] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19185.389472] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19196.942969] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19196.976285] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19196.976379] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_CLEAN_TOUCH_FLAG
+[19196.976388] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19196.977745] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19201.262367] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19201.272502] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19201.272723] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19201.297194] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19203.250039] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19203.271545] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19203.271599] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_CLEAN_TOUCH_FLAG
+[19203.271603] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19203.506605] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19205.648994] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19205.659527] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19205.659849] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19205.699997] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19212.542622] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19212.556878] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19212.556952] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_CLEAN_TOUCH_FLAG
+[19212.556958] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19212.790518] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19216.960484] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19216.977361] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19216.977645] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19217.011414] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19217.436411] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19217.533842] oplus_bsp_uff_fp_driver: gf_read enter
+[19217.533861] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19218.330864] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19218.341525] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19218.341588] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_CLEAN_TOUCH_FLAG
+[19218.341592] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19218.574528] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19222.363082] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19222.376171] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19222.376425] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19222.414081] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19222.831401] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19222.946312] oplus_bsp_uff_fp_driver: gf_read enter
+[19222.946335] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19223.742528] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19223.765636] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19223.765702] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_CLEAN_TOUCH_FLAG
+[19223.765706] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19224.006965] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19226.754113] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19226.761318] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19226.761501] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19226.777676] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19227.198441] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19227.284795] oplus_bsp_uff_fp_driver: gf_read enter
+[19227.284814] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19229.271535] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19229.458637] oplus_bsp_uff_fp_driver: gf_read enter
+[19229.458657] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19229.627131] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19229.796449] oplus_bsp_uff_fp_driver: gf_read enter
+[19229.796478] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19229.862274] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19229.871685] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19229.871737] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_CLEAN_TOUCH_FLAG
+[19229.871743] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19230.106138] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19236.270842] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19236.283562] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19236.283829] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19236.320637] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19236.729195] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19236.917637] oplus_bsp_uff_fp_driver: gf_read enter
+[19236.917657] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19236.998414] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19237.013042] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19237.013100] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_CLEAN_TOUCH_FLAG
+[19237.013104] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19237.246217] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19239.293671] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19239.304108] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19239.304383] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19239.344045] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19239.754621] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19239.956659] oplus_bsp_uff_fp_driver: gf_read enter
+[19239.956676] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19240.154729] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19240.233128] oplus_bsp_uff_fp_driver: gf_read enter
+[19240.233149] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19240.522703] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19240.748580] oplus_bsp_uff_fp_driver: gf_read enter
+[19240.748599] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19240.817117] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19240.825863] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19240.825899] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_CLEAN_TOUCH_FLAG
+[19240.825902] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19241.071649] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19244.411108] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19244.424677] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19244.424943] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19244.462877] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19244.898817] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19244.978796] oplus_bsp_uff_fp_driver: gf_read enter
+[19244.978812] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19245.185363] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19245.200036] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19245.200076] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_CLEAN_TOUCH_FLAG
+[19245.200079] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19245.447529] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19249.511453] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19249.526844] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19249.527414] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19249.541326] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19249.971997] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19250.184664] oplus_bsp_uff_fp_driver: gf_read enter
+[19250.184678] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19250.263699] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19250.276085] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19250.276201] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_CLEAN_TOUCH_FLAG
+[19250.276210] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19250.510142] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19265.695435] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19265.904297] oplus_bsp_uff_fp_driver: gf_read enter
+[19265.904308] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19278.405415] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19278.584699] oplus_bsp_uff_fp_driver: gf_read enter
+[19278.584759] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19278.776652] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19278.992264] oplus_bsp_uff_fp_driver: gf_read enter
+[19278.992281] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19279.177575] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19279.396340] oplus_bsp_uff_fp_driver: gf_read enter
+[19279.396360] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19279.581592] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19279.766737] oplus_bsp_uff_fp_driver: gf_read enter
+[19279.766756] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19279.953676] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19280.166558] oplus_bsp_uff_fp_driver: gf_read enter
+[19280.166575] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19280.351082] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19280.387799] oplus_bsp_uff_fp_driver: gf_read enter
+[19280.387936] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19280.663827] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19280.818433] oplus_bsp_uff_fp_driver: gf_read enter
+[19280.818456] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19281.008182] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19281.209953] oplus_bsp_uff_fp_driver: gf_read enter
+[19281.209971] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19291.443387] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19291.632681] oplus_bsp_uff_fp_driver: gf_read enter
+[19291.632701] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19302.578412] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19302.768177] oplus_bsp_uff_fp_driver: gf_read enter
+[19302.768197] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19302.950479] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19303.127657] oplus_bsp_uff_fp_driver: gf_read enter
+[19303.127677] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19303.314671] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19303.517619] oplus_bsp_uff_fp_driver: gf_read enter
+[19303.517636] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19303.706939] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19303.921100] oplus_bsp_uff_fp_driver: gf_read enter
+[19303.921117] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19304.133854] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19304.349848] oplus_bsp_uff_fp_driver: gf_read enter
+[19304.349869] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19304.532708] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19304.575823] oplus_bsp_uff_fp_driver: gf_read enter
+[19304.575845] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19304.852628] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19305.036249] oplus_bsp_uff_fp_driver: gf_read enter
+[19305.036268] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19306.289151] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19306.505370] oplus_bsp_uff_fp_driver: gf_read enter
+[19306.505387] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19307.532900] oplus_bsp_uff_fp_driver: recv tp event:1
+[19307.532903] oplus_bsp_uff_fp_driver: sizeof(struct touchpanel_event) =64, sizeof(tp2fp_touchpanel_event_t) =64, tp_info->touch_state =1, tp_info->x=4675, tp_info->y=17654, tp_firmware_time=0
+[19307.532909] oplus_bsp_uff_fp_driver: touch_early_down_flag = 0, is_touch_fp_area_cnt = 0, fp_down_time 0, touch_fp_area_time 0
+[19307.532919] oplus_bsp_uff_fp_driver: oplus_tp_notifier_call touch down touchdown
+[19307.532926] oplus_bsp_uff_fp_driver: send_fingerprint_msg, module:0, event:4
+[19307.533044] oplus_bsp_uff_fp_driver: end wait for driver event
+[19307.533644] oplus_bsp_uff_fp_driver: gf_read enter
+[19307.533653] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19307.534477] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_LHBM_TEMPERATURE
+[19307.534503] oplus_bsp_uff_fp_driver: enter local_hbm_get_temperature
+[19307.534539] oplus_bsp_uff_fp_driver: local_hbm_get_temperature, 0 : shell_temp = 30294
+[19307.534552] oplus_bsp_uff_fp_driver: local_hbm_get_temperature, 1 : shell_temp = 29118
+[19307.534561] oplus_bsp_uff_fp_driver: local_hbm_get_temperature, 2 : shell_temp = 29790
+[19307.534565] oplus_bsp_uff_fp_driver: exit local_hbm_get_temperature, min_shell_temp = 29118
+[19307.535212] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19307.554290] oplus_bsp_uff_fp_driver: [fp_panel_notifier_callback] UI ready
+[19307.554492] oplus_bsp_uff_fp_driver: send_fingerprint_msg, module:1, event:6
+[19307.554549] oplus_bsp_uff_fp_driver: end wait for driver event
+[19307.554801] oplus_bsp_uff_fp_driver: gf_read enter
+[19307.554807] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19307.590039] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19307.606336] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19307.656845] oplus_bsp_uff_fp_driver: unknow module, ignored
+[19307.656859] oplus_bsp_uff_fp_driver: send_fingerprint_msg, module:3, event:1
+[19307.656919] oplus_bsp_uff_fp_driver: end wait for driver event
+[19307.657125] oplus_bsp_uff_fp_driver: gf_read enter
+[19307.657131] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19307.679192] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19307.679797] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19307.702786] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19307.702981] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19307.731379] oplus_bsp_uff_fp_driver: unknow module, ignored
+[19307.731399] oplus_bsp_uff_fp_driver: send_fingerprint_msg, module:3, event:1
+[19307.731504] oplus_bsp_uff_fp_driver: end wait for driver event
+[19307.731946] oplus_bsp_uff_fp_driver: gf_read enter
+[19307.731952] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19307.773631] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19307.774324] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19307.775099] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19307.775219] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19307.796713] oplus_bsp_uff_fp_driver: [fp_panel_notifier_callback] UI disappear
+[19307.796729] oplus_bsp_uff_fp_driver: send_fingerprint_msg, module:1, event:7
+[19307.796837] oplus_bsp_uff_fp_driver: end wait for driver event
+[19307.797147] oplus_bsp_uff_fp_driver: gf_read enter
+[19307.797161] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19308.042364] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19308.042454] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_BATT_TEMPERATURE
+[19308.042466] oplus_bsp_uff_fp_driver: get_battery_temperature_dgr, get battery temp = 30
+[19308.042661] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19308.165688] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19308.165896] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19308.230314] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19308.231765] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19308.263983] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19314.565922] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19314.616818] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19314.616933] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_CLEAN_TOUCH_FLAG
+[19314.616947] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19314.638141] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19323.329315] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19323.535674] oplus_bsp_uff_fp_driver: gf_read enter
+[19323.535695] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19327.092089] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19327.300742] oplus_bsp_uff_fp_driver: gf_read enter
+[19327.300762] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19327.486855] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19327.663843] oplus_bsp_uff_fp_driver: gf_read enter
+[19327.663859] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19327.847513] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19328.072483] oplus_bsp_uff_fp_driver: gf_read enter
+[19328.072504] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19330.340143] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19330.454004] oplus_bsp_uff_fp_driver: gf_read enter
+[19330.454023] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19332.525221] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19332.741136] oplus_bsp_uff_fp_driver: gf_read enter
+[19332.741152] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19332.933411] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19333.127069] oplus_bsp_uff_fp_driver: gf_read enter
+[19333.127088] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19333.318908] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19333.515692] oplus_bsp_uff_fp_driver: gf_read enter
+[19333.515713] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19333.705907] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19333.929246] oplus_bsp_uff_fp_driver: gf_read enter
+[19333.929264] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19334.163887] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19334.380693] oplus_bsp_uff_fp_driver: gf_read enter
+[19334.380711] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19336.648640] oplus_bsp_uff_fp_driver: fp driver wait event fail, -512
+[19336.856551] oplus_bsp_uff_fp_driver: gf_read enter
+[19336.856583] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19338.444651] oplus_bsp_uff_fp_driver: recv tp event:1
+[19338.444654] oplus_bsp_uff_fp_driver: sizeof(struct touchpanel_event) =64, sizeof(tp2fp_touchpanel_event_t) =64, tp_info->touch_state =1, tp_info->x=4480, tp_info->y=17138, tp_firmware_time=0
+[19338.444668] oplus_bsp_uff_fp_driver: touch_early_down_flag = 0, is_touch_fp_area_cnt = 0, fp_down_time 0, touch_fp_area_time 0
+[19338.444680] oplus_bsp_uff_fp_driver: oplus_tp_notifier_call touch down touchdown
+[19338.444685] oplus_bsp_uff_fp_driver: send_fingerprint_msg, module:0, event:4
+[19338.444809] oplus_bsp_uff_fp_driver: end wait for driver event
+[19338.446848] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_LHBM_TEMPERATURE
+[19338.447951] oplus_bsp_uff_fp_driver: enter local_hbm_get_temperature
+[19338.447974] oplus_bsp_uff_fp_driver: local_hbm_get_temperature, 0 : shell_temp = 30294
+[19338.447979] oplus_bsp_uff_fp_driver: local_hbm_get_temperature, 1 : shell_temp = 28950
+[19338.447981] oplus_bsp_uff_fp_driver: local_hbm_get_temperature, 2 : shell_temp = 29514
+[19338.447983] oplus_bsp_uff_fp_driver: exit local_hbm_get_temperature, min_shell_temp = 28950
+[19338.448319] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19338.450538] oplus_bsp_uff_fp_driver: gf_read enter
+[19338.450550] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19338.479879] oplus_bsp_uff_fp_driver: [fp_panel_notifier_callback] UI ready
+[19338.479885] oplus_bsp_uff_fp_driver: send_fingerprint_msg, module:1, event:6
+[19338.483238] oplus_bsp_uff_fp_driver: end wait for driver event
+[19338.484562] oplus_bsp_uff_fp_driver: gf_read enter
+[19338.484583] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19338.519411] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19338.535768] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19338.595069] oplus_bsp_uff_fp_driver: unknow module, ignored
+[19338.595084] oplus_bsp_uff_fp_driver: send_fingerprint_msg, module:3, event:1
+[19338.595189] oplus_bsp_uff_fp_driver: end wait for driver event
+[19338.595561] oplus_bsp_uff_fp_driver: gf_read enter
+[19338.595570] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19338.623048] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19338.623902] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19338.659776] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19338.659871] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19338.675999] oplus_bsp_uff_fp_driver: unknow module, ignored
+[19338.676036] oplus_bsp_uff_fp_driver: send_fingerprint_msg, module:3, event:1
+[19338.681227] oplus_bsp_uff_fp_driver: end wait for driver event
+[19338.681402] oplus_bsp_uff_fp_driver: gf_read enter
+[19338.681409] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19338.706986] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19338.708045] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19338.708866] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19338.709049] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19338.754995] oplus_bsp_uff_fp_driver: [fp_panel_notifier_callback] UI disappear
+[19338.755009] oplus_bsp_uff_fp_driver: send_fingerprint_msg, module:1, event:7
+[19338.756515] oplus_bsp_uff_fp_driver: end wait for driver event
+[19338.756912] oplus_bsp_uff_fp_driver: gf_read enter
+[19338.756929] oplus_bsp_uff_fp_driver: begin wait for driver event
+[19339.327577] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19339.327815] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_BATT_TEMPERATURE
+[19339.327845] oplus_bsp_uff_fp_driver: get_battery_temperature_dgr, get battery temp = 30
+[19339.328390] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19339.383040] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19339.385029] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19339.452350] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+[19339.452748] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_ENABLE
+[19340.018159] oplus_bsp_uff_fp_driver: fp_ioctl FP_IOC_WAKELOCK_TIMEOUT_DISABLE
+
+~
+❯ adb shell lsmod | grep olc
+  adb shell dmesg | grep "olc"
+olc                    24576  7 camera,oplus_chg,oplus_bsp_synaptics_tcm2,oplus_bsp_tp_common,oplus_hbp_core,oplus_bsp_uff_fp_driver,oplus_bsp_tri_key
+
+~
+❯ find ~/BUILDS/camry-blobs/CPH2621_GLO/ -name "olc.ko"
+/home/diamond/BUILDS/camry-blobs/CPH2621_GLO/recovery/lib/modules/olc.ko
+
+~
+❯

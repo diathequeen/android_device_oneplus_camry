@@ -4,4 +4,8 @@
 //
 
 soong_namespace {
+    imports: [
+        "hardware/qcom-caf/sm6375-6.1",
+        "hardware/oneplus",
+    ]
 }

@@ -4,6 +4,7 @@
 #
 
 DEVICE_PATH := device/oneplus/camry
+KERNEL_MODULES_OUT := $(DEVICE_PATH)/prebuilts
 
 # A/B
 AB_OTA_UPDATER := true
@@ -42,9 +43,13 @@ TARGET_BOOTLOADER_BOARD_NAME := blair
 TARGET_NO_BOOTLOADER := true
 
 # Display
-TARGET_SCREEN_DENSITY := 480
+TARGET_SCREEN_DENSITY := 395
 
 # Kernel
+VENDOR_KERNEL_MODULES := $(wildcard $(KERNEL_MODULES_OUT)/vendor_dlkm/*.ko)
+SYSTEM_KERNEL_MODULES := $(wildcard $(KERNEL_MODULES_OUT)/system_dlkm/*.ko)
+VENDOR_KERNEL_LOAD_MOD := $(filter %.load %.dep %.softdep %.blocklist %.alias, $(VENDOR_KERNEL_MODULES))
+SYSTEM_KERNEL_LOAD_MOD := $(filter %.load %.dep, $(SYSTEM_KERNEL_MODULES))
 BOARD_BOOT_HEADER_VERSION := 4
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 iptable_raw.raw_before_defrag=1 ip6table_raw.raw_before_defrag=1 log_buf_len=1M bootconfig
@@ -55,6 +60,8 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_CONFIG := camry_defconfig
 TARGET_KERNEL_SOURCE := kernel/oneplus/camry
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(VENDOR_KERNEL_MODULES)
+BOARD_SYSTEM_RAMDISK_KERNEL_MODULES := $(SYSTEM_KERNEL_MODULES)
 
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
@@ -64,9 +71,6 @@ TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilts/dtb.img
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
 endif
-
-# Kernel Modules
-BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
@@ -143,4 +147,4 @@ BOARD_AVB_VENDOR_BOOT_ROLLBACK_INDEX := 1
 BOARD_AVB_VENDOR_BOOT_ROLLBACK_INDEX_LOCATION := 1
 
 # Inherit the proprietary files
-include vendor/oneplus/camry/BoardConfigVendor.mk
+-include vendor/oneplus/camry/BoardConfigVendor.mk

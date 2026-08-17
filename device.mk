@@ -123,7 +123,9 @@ PRODUCT_COPY_FILES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/qcom-caf/sm6375-6.1 \
+    hardware/oneplus
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/oneplus/camry/camry-vendor.mk)

@@ -384,3 +384,4 @@ goodix_ts.ko
 msm_video.ko
 camera.ko
 msm_kgsl.ko
+olc.ko
