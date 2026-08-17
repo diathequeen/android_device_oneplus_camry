@@ -10,10 +10,11 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/oneplus/camry',
-    'hardware/qcom-caf/sm6375'
-    'hardware/qcom-caf/wlan'
-    'hardware/oneplus'
+    'vendor/oneplus/camry',
+    'vendor/qcom/opensource/display',
+    'hardware/qcom-caf/wlan',
+    'hardware/qcom-caf/sm6375-blair',
+    'hardware/oneplus',
 ]
 
 module = ExtractUtilsModule(
