@@ -21,7 +21,6 @@ AB_OTA_PARTITIONS += \
     system_dlkm \
     product \
     system_ext
-BOARD_USES_RECOVERY_AS_BOOT := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -63,12 +62,11 @@ TARGET_KERNEL_SOURCE := kernel/oneplus/camry
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(VENDOR_KERNEL_MODULES)
 BOARD_SYSTEM_RAMDISK_KERNEL_MODULES := $(SYSTEM_KERNEL_MODULES)
 
-# Kernel - prebuilt
+# Kernel Prebuilts
 TARGET_FORCE_PREBUILT_KERNEL := true
 ifeq ($(TARGET_FORCE_PREBUILT_KERNEL),true)
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilts/kernel
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilts/dtb.img
-BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
+BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilts/dtb
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
 endif
 

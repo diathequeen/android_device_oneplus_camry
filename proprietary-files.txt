@@ -11,6 +11,7 @@ vendor/etc/acdbdata/nn_ns_models/fai__2.2.0_0.1__3.0.0_0.0__eai_1.00.pmd
 vendor/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd
 
 # Audio Libraries
+odm/lib/lib_lvacfs.so
 odm/lib/liblvacfs_wrapper.so
 
 # Audio LVIMFS params
@@ -699,6 +700,7 @@ odm/lib64/camera/fdconfigvideo.bin
 odm/lib64/camera/fdconfigvideolite.bin
 odm/lib64/camera/revision.txt
 odm/lib64/lib2DSlender.so
+odm/lib64/libalog.so
 odm/lib64/libAlgoInterface.so
 odm/lib64/libAlgoProcess.so
 odm/lib64/libAncFilter.so
@@ -753,7 +755,6 @@ odm/lib64/libapsexif.so
 odm/lib64/libapsjpeg.so
 odm/lib64/libapspng.so
 odm/lib64/libapsyuv.so
-
 odm/lib64/libarcsoft_distortion_correction.so
 odm/lib64/libarcsoft_dualcam_bokeh_api.so
 odm/lib64/libarcsoft_dualcam_refocus_left.so
@@ -805,6 +806,7 @@ odm/lib64/librmsclib1.so
 odm/lib64/vendor.oplus.hardware.orms@1.0.so
 odm/etc/camera/M_FaceAttribute_RGB_age_gender_1.7.1.model.hardcode
 vendor/lib/libcamxexternalformatutils.so
+vendor/lib/libcdsprpc.so
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.override.so
 vendor/lib64/com.qti.chiusecaseselector.so
@@ -861,6 +863,7 @@ vendor/lib64/libcamxstatscore.so
 vendor/lib64/libcamxswispiqmodule.so
 vendor/lib64/libcamxswprocessalgo.so
 vendor/lib64/libcamxtintlessalgo.so
+vendor/lib64/libcdsprpc.so
 vendor/lib64/libchilog.so
 vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libipebpsstriping.so
@@ -876,6 +879,8 @@ vendor/lib64/libmmcamera_mfnr.so
 vendor/lib64/libmmcamera_mfnr_t4.so
 vendor/lib64/libmmcamera_pdpc.so
 vendor/lib64/libnanopb.so
+vendor/lib64/libOpenCL.so
+vendor/lib64/libOpenCL_adreno.so
 vendor/lib64/libofflinedump.so
 vendor/lib64/libofflinelog.so
 vendor/lib64/libopencv.so
@@ -885,8 +890,8 @@ vendor/lib64/libqllengine.so
 vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libtfestriping.so
 vendor/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
-vendor/lib64/vendor.oplus.hardware.osense.client-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
+vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # CVP firmware (+Fingerprints)
 odm/vendor/firmware/alipay.b00
@@ -975,7 +980,6 @@ odm/vendor/firmware/uff_spi.mdt
 odm/bin/init.oplus.fingerprints.sh
 odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc
 odm/etc/vintf/manifest/manifest_oplus_fingerprint_aidl_v3.xml
-odm/lib64/android.hardware.biometrics.common-V1-ndk.so
 odm/lib64/vendor.oplus.hardware.commondcs-V1-ndk.so
 odm/lib64/vendor.oplus.hardware.osense.client-V1-ndk.so
 
