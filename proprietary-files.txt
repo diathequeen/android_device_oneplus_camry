@@ -806,7 +806,7 @@ odm/lib64/librmsclib1.so
 odm/lib64/vendor.oplus.hardware.orms@1.0.so
 odm/etc/camera/M_FaceAttribute_RGB_age_gender_1.7.1.model.hardcode
 vendor/lib/libcamxexternalformatutils.so
-vendor/lib/libcdsprpc.so
+vendor/lib/libcdsprpc.so;DISABLE_DEPS
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.override.so
 vendor/lib64/com.qti.chiusecaseselector.so
