@@ -1,6 +1,11 @@
-#! /vendor/bin/sh
-
-# Copyright (c) 2012, The Linux Foundation. All rights reserved.
+#==============================================================================
+#       init.qti.media.rc
+#
+# Copyright (c) 2020 Qualcomm Technologies, Inc.
+# All Rights Reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+#
+# Copyright (c) 2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -26,10 +31,26 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-#
-#
+#===============================================================================
+service qti-media /vendor/bin/init.qti.media.sh
+    class main
+    user media
+    group media
+    disabled
+    oneshot
 
-PATH=/system/bin:$PATH
-export PATH
-cat /sys/devices/platform/rs300000a7.65536/force_sync
-cat /sys/devices/platform/rs300100a7.65536/force_sync
+on early-init
+    setprop vendor.media.system.build_codename ${ro.build.version.release_or_codename}
+
+on post-fs
+    start qti-media
+
+on post-fs-data
+    setprop ro.media.xml_variant.codecs ${vendor.media.target_variant}
+    setprop ro.media.xml_variant.codecs_performance ${vendor.media.target_variant}
+
+on property:vendor.netflix.bsp_rev=*
+    setprop ro.netflix.bsp_rev ${vendor.netflix.bsp_rev}
+
+on property:vendor.mm.target.enable.qcom_parser=*
+    setprop vendor.mm.enable.qcom_parser ${vendor.mm.target.enable.qcom_parser}

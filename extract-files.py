@@ -18,11 +18,14 @@ from extract_utils.main import (
 
 namespace_imports = [
     'vendor/qcom/opensource/display',
+    'vendor/qcom/opensource/commonsys-intf/display',
     'hardware/qcom-caf/sm6375-6.1',
     'hardware/oneplus',
 ]
 
 blob_fixups: blob_fixups_user_type = {
+    'odm/lib64/libAlgoProcess.so': blob_fixup()
+        .replace_needed('android.hardware.graphics.common-V4-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
     ('odm/lib64/libCOppLceTonemapAPI.so', 'odm/lib64/libaps_frame_registration.so', 'odm/lib64/libYTCommon.so'): blob_fixup()
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so')
 }

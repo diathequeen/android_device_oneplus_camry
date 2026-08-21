@@ -52,7 +52,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_ENABLE_UFFD_GC := true
 
 # Devices
-TARGET_OTA_ASSERT_DEVICE := CPH2619,CPH2621
+TARGET_OTA_ASSERT_DEVICE := CPH2621
 
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
@@ -123,6 +123,8 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+    vendor/qcom/opensource/display \
+    vendor/qcom/opensource/commonsys-intf/display \
     hardware/qcom-caf/sm6375-6.1 \
     hardware/oneplus
 
