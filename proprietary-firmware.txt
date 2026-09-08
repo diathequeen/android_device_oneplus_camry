@@ -14,6 +14,7 @@ modem.img;AB
 oplus_sec.img;AB
 oplusstanvbk.img;AB
 qupfw.img;AB
+rpm.img;AB
 splash.img;AB
 tz.img;AB
 uefisecapp.img;AB
