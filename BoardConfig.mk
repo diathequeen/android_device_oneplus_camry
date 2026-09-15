@@ -21,10 +21,13 @@ AB_OTA_PARTITIONS += \
     product \
     system_ext
 
+BOARD_SUPER_PARTITION_SIZE := 12884901888
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := OP5D49L1
+
 # Display
 TARGET_SCREEN_DENSITY := 395
-
-BOARD_SUPER_PARTITION_SIZE := 12884901888
 
 # Prebuilts
 TARGET_FORCE_PREBUILT_KERNEL := true
@@ -40,9 +43,6 @@ TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/system_ext.prop
 TARGET_SYSTEM_DLKM_PROP += $(DEVICE_PATH)/system_dlkm.prop
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
 TARGET_ODM_DLKM_PROP += $(DEVICE_PATH)/odm_dlkm.prop
-
-# Security patch level
-VENDOR_SECURITY_PATCH := 2026-06-01
 
 # Inherit the proprietary files
 -include vendor/oneplus/camry/BoardConfigVendor.mk
