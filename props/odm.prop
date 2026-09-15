@@ -1,2 +1,0 @@
-# Regional properties
-import /odm/etc/${ro.boot.prjname}/build.default.prop
