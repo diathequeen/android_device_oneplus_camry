@@ -20,6 +20,7 @@ from extract_utils.main import (
 namespace_imports = [
     'hardware/oplus',
     'hardware/qcom-caf/sm6375-6.1',
+    'vendor/oneplus/sm6375-common',
     'vendor/qcom/opensource/commonsys-intf/display',
 ]
 
@@ -109,5 +110,7 @@ module = ExtractUtilsModule(
 )
 
 if __name__ == '__main__':
-    utils = ExtractUtils.device(module)
+    utils = ExtractUtils.device_with_common(
+        module, 'sm6375-common', module.vendor
+    )
     utils.run()
