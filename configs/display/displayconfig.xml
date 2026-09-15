@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<displayConfiguration>
+  <densityMapping>
+    <density>
+    <density>
+      <height>1080</height>
+      <width>1920</width>
+      <density>320</density>
+    </density>
+    <density>
+      <height>1080</height>
+      <width>2400</width>
+      <density>395</density>
+    </density>
+  </densityMapping>
+
+  <highBrightnessMode enabled="true">
+    <transitionPoint>0.85</transitionPoint>
+    <minimumHdrPercentOfScreen>0.1</minimumHdrPercentOfScreen>
+
+    <minimumLux>10000</minimumLux>
+    <timing>
+      <timeWindowSecs>1800</timeWindowSecs>  // Window in which we restrict HBM.
+      <timeMaxSecs>300</timeMaxSecs>         // Maximum time of HBM allowed in that window.
+      <timeMinSecs>60</timeMinSecs>          // Minimum time remaining required to switch
+    </timing>                                //   HBM on for.
+    <refreshRate>
+      <minimum>120</minimum>
+      <maximum>120</maximum>
+    </refreshRate>
+    <thermalStatusLimit>light</thermalStatusLimit>
+    <allowInLowPowerMode>false</allowInLowPowerMode>
+  </highBrightnessMode>
+</displayConfiguration>
