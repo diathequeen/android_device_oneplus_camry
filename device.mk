@@ -1,132 +1,55 @@
 #
-# SPDX-FileCopyrightText: The LineageOS Project
+# Copyright (C) 2021-2026 The LineageOS Project
+#
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+# AAPT
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 
-# A/B
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2400
+TARGET_SCREEN_WIDTH := 1080
 
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-impl \
-    android.hardware.boot@1.2-impl.recovery \
-    android.hardware.boot@1.2-service
-
-PRODUCT_PACKAGES += \
-    update_engine \
-    update_engine_sideload \
-    update_verifier
-
-AB_OTA_POSTINSTALL_CONFIG += \
-    RUN_POSTINSTALL_system=true \
-    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
-    FILESYSTEM_TYPE_system=ext4 \
-    POSTINSTALL_OPTIONAL_system=true
-
-AB_OTA_POSTINSTALL_CONFIG += \
-    RUN_POSTINSTALL_vendor=true \
-    POSTINSTALL_PATH_vendor=bin/checkpoint_gc \
-    FILESYSTEM_TYPE_vendor=ext4 \
-    POSTINSTALL_OPTIONAL_vendor=true
-
-PRODUCT_PACKAGES += \
-    checkpoint_gc \
-    otapreopt_script
-
-# API levels
-PRODUCT_SHIPPING_API_LEVEL := 34
-
-# fastbootd
-PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.1-impl-mock \
-    fastbootd
-
-# Health
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service
-
-# Kernel
-PRODUCT_ENABLE_UFFD_GC := true
-
-# Devices
-TARGET_OTA_ASSERT_DEVICE := CPH2621
-
-# Overlays
-PRODUCT_ENFORCE_RRO_TARGETS := *
-
-# Partitions
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
-# Product characteristics
-PRODUCT_CHARACTERISTICS := nosdcard
-
-# Rootdir
-PRODUCT_PACKAGES += \
-    ftm_power_config.sh \
-    init.at.class_main.sh \
-    init.at.post_boot.sh \
-    init.class_main.sh \
-    init.crda.sh \
-    init.kernel.post_boot-blair.sh \
-    init.kernel.post_boot-holi.sh \
-    init.kernel.post_boot.sh \
-    init.mdm.sh \
-    init.qcom.class_core.sh \
-    init.qcom.coex.sh \
-    init.qcom.early_boot.sh \
-    init.qcom.efs.sync.sh \
-    init.qcom.post_boot.sh \
-    init.qcom.sdio.sh \
-    init.qcom.sensors.sh \
-    init.qcom.sh \
-    init.qcom.usb.sh \
-    init.qti.chg_policy.sh \
-    init.qti.kernel.debug-blair.sh \
-    init.qti.kernel.debug-holi.sh \
-    init.qti.kernel.debug.sh \
-    init.qti.kernel.early_debug-blair.sh \
-    init.qti.kernel.early_debug-holi.sh \
-    init.qti.kernel.early_debug.sh \
-    init.qti.kernel.sh \
-    init.qti.media.sh \
-    init.qti.qcv.sh \
-    init.qti.write.sh \
-    ioscheduler_switch.sh \
-    qca6234-service.sh \
-    system_dlkm_modprobe.sh \
-    vendor_modprobe.sh \
-
-PRODUCT_PACKAGES += \
-    fstab.default \
-    init.at.qcom.rc \
-    init.at.target.rc \
-    init.oem_ftm.rc \
-    init.qcom.factory.rc \
-    init.qcom.rc \
-    init.qcom.usb.rc \
-    init.qti.kernel.rc \
-    init.qti.ufs.rc \
-    init.target.rc \
-    init.wlan.qcom.rc \
-    init.wlan.target.rc \
-    vendor.oem_ftm.rc \
-    vendor.oem_ftm_svc_disable.rc \
-    init.recovery.qcom.rc \
-    ueventd.qcom.rc \
-
+# Display
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.default:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.default
+    $(LOCAL_PATH)/configs/display/displayconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946716506123905.xml
+
+# Regional properties
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/root/vendor/odm/etc/23881/flags.prop:$(TARGET_COPY_OUT_ODM)/etc/23881/flags.prop
+
+# Keymint
+PRODUCT_PACKAGES += \
+    android.hardware.security.keymint3-service.strongbox.nxp \
+    android.hardware.weaver-service.nxp
+
+# LiveDisplay
+$(call soong_config_set_bool,OPLUS_LINEAGE_LIVEDISPLAY_HAL,ENABLE_SE,false)
+
+# PowerShare
+PRODUCT_PACKAGES += \
+    vendor.lineage.powershare-service.oplus
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH) \
-    vendor/qcom/opensource/display \
-    vendor/qcom/opensource/commonsys-intf/display \
-    hardware/qcom-caf/sm6375-6.1 \
-    hardware/oneplus
+    $(LOCAL_PATH)
 
-# Inherit the proprietary files
+# Touch features
+$(call soong_config_set_bool,OPLUS_LINEAGE_TOUCH_HAL,ENABLE_GM,true)
+
+# Vibrator
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.vibrator.service
+
+$(call soong_config_set_bool,qti_vibrator,use_effect_stream,true)
+$(call soong_config_set,qti_vibrator,effect_lib,libqtivibratoreffect.oplus.camry)
+
+# WiFi firmware symlinks
+PRODUCT_PACKAGES += \
+    firmware_wlan_mac.bin_symlink \
+    firmware_WCNSS_qcom_cfg.ini_symlink
+
+# Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/camry/camry-vendor.mk)
