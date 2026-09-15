@@ -5,7 +5,6 @@
 #
 
 DEVICE_PATH := device/oneplus/camry
-KERNEL_MODULES_OUT := $(DEVICE_PATH)/prebuilts
 
 # A/B
 AB_OTA_UPDATER := true
@@ -39,8 +38,13 @@ include device/oneplus/camry-kernel/BoardConfig.mk
 endif
 
 # Properties
-TARGET_ODM_PROP += $(DEVICE_PATH)/props/odm.prop
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/props/vendor.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/properties/system.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/properties/vendor.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/properties/product.prop
+TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/properties/system_ext.prop
+TARGET_SYSTEM_DLKM_PROP += $(DEVICE_PATH)/properties/system_dlkm.prop
+TARGET_ODM_PROP += $(DEVICE_PATH)/properties/odm.prop
+TARGET_ODM_DLKM_PROP += $(DEVICE_PATH)/properties/odm_dlkm.prop
 
 # Include the proprietary files BoardConfig.
 include vendor/oneplus/camry/BoardConfigVendor.mk
