@@ -1,4 +1,4 @@
-Copyright (C) 2023 The LineageOS Project
+Copyright (C) 2026 The LineageOS Project
 
 Device tree for OnePlus Nord CE4 Lite 5G
 =========================================
