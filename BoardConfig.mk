@@ -5,21 +5,8 @@
 
 DEVICE_PATH := device/oneplus/camry
 
-# A/B
-AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS += \
-    vendor \
-    recovery \
-    system \
-    vendor_dlkm \
-    init_boot \
-    vendor_boot \
-    odm \
-    dtbo \
-    boot \
-    system_dlkm \
-    product \
-    system_ext
+# Include the common OEM chipset BoardConfig.
+include device/oneplus/sm6375-common/BoardConfigCommon.mk
 
 BOARD_SUPER_PARTITION_SIZE := 12884901888
 
@@ -44,4 +31,4 @@ TARGET_SYSTEM_DLKM_PROP += $(DEVICE_PATH)/properties/system_dlkm.prop
 TARGET_ODM_PROP += $(DEVICE_PATH)/properties/odm.prop
 
 # Inherit the proprietary files
--include vendor/oneplus/camry/BoardConfigVendor.mk
+include vendor/oneplus/camry/BoardConfigVendor.mk
