@@ -6,21 +6,8 @@
 
 DEVICE_PATH := device/oneplus/camry
 
-# A/B
-AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS += \
-    vendor \
-    recovery \
-    system \
-    vendor_dlkm \
-    init_boot \
-    vendor_boot \
-    odm \
-    dtbo \
-    boot \
-    system_dlkm \
-    product \
-    system_ext
+# Include the common OEM chipset BoardConfig.
+include device/oneplus/sm6375-common/BoardConfigCommon.mk
 
 # Partitions
 BOARD_SUPER_PARTITION_SIZE := 12884901888
