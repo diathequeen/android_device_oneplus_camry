@@ -10,6 +10,6 @@ git clone https://github.com/diathequeen/android_device_oneplus_camry.git -b lin
 **To start a build**
 ```
 source build/envsetup.sh
-breakfast camry
-brunch camry
+lunch lineage_camry-bp4a-user # or userdebug
+mka bacon
 ```
