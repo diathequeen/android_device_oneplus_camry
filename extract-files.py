@@ -53,6 +53,8 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'vendor/lib64/camera/components/com.qti.stats.aecwrapper.so': blob_fixup()
+        .replace_needed('libhwconfigurationutil_vendor.so', 'libhwconfigurationutil.so'),
     'odm/etc/camera/CameraHWConfiguration.config': blob_fixup()
         # Disable face detection AE behaviour
         .regex_replace(r'(enableSWfdForThirdCamUnit += )TRUE', r'\1FALSE')
