@@ -37,7 +37,6 @@ lib_fixups: lib_fixups_user_type = {
         'libarcsoft_triple_zoomtranslator',
         'libdualcam_optical_zoom_control',
         'libdualcam_video_optical_zoom',
-        'libhwconfigurationutil',
         'libpwirisfeature',
         'libpwirishalwrapper',
         'libtriplecam_optical_zoom_control',
@@ -53,8 +52,6 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
-    'vendor/lib64/camera/components/com.qti.stats.aecwrapper.so': blob_fixup()
-        .replace_needed('libhwconfigurationutil_vendor.so', 'libhwconfigurationutil.so'),
     'odm/etc/camera/CameraHWConfiguration.config': blob_fixup()
         # Disable face detection AE behaviour
         .regex_replace(r'(enableSWfdForThirdCamUnit += )TRUE', r'\1FALSE')
@@ -100,6 +97,20 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
     'vendor/lib64/libcwb_qcom_aidl.so': blob_fixup()
         .add_needed('libui_shim.so'),
+    (
+        'vendor/lib64/camera/components/com.qti.node.eisv2.so',
+        'vendor/lib64/camera/components/com.qti.node.remosaic.so',
+        'vendor/lib64/camera/components/com.qti.node.swmctf.so',
+        'vendor/lib64/camera/components/com.qti.stats.aecwrapper.so',
+        'vendor/lib64/camera/components/com.qti.stats.af.so',
+        'vendor/lib64/com.qti.chiusecaseselector.so',
+        'vendor/lib64/com.qti.feature2.generic.so',
+        'vendor/lib64/com.qti.feature2.rt.so',
+        'vendor/lib64/com.qti.feature2.rtmcx.so',
+        'vendor/lib64/hw/camera.qcom.so',
+    ): blob_fixup()
+        # Replace dependency to the one actually there in device dump
+        .replace_needed('libhwconfigurationutil_vendor.so', 'libhwconfigurationutil.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
