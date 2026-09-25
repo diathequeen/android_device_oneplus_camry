@@ -31,26 +31,6 @@ odm/etc/acdbdata/acdb_cal.acdb
 # ADSP modules
 odm/lib/rfsa/adsp/aiboost/signed/libQnnHtpV75Skel.so
 odm/lib/rfsa/adsp/aiboost/signed/libaiboostubwc_skel.so
-odm/lib/rfsa/adsp/libarcsoft_dualcam_refocus_skel.so
-odm/lib/rfsa/adsp/libarcsoft_hdrplus_hvx_skel.so
-odm/lib/rfsa/adsp/libarcsoft_portraitSN_hvx_skel.so
-odm/lib/rfsa/adsp/libarcsoft_portraitsn_hvx_skel.so
-odm/lib/rfsa/adsp/libcalculator_skel.so
-odm/lib/rfsa/adsp/libhdr_skel.so
-odm/lib/rfsa/adsp/libhvxFaceBeautyPre_skel.so
-odm/lib/rfsa/adsp/libktveffect.so
-odm/lib/rfsa/adsp/libsnpe_dsp_domains_skel.so
-odm/lib/rfsa/adsp/libsnpe_dsp_skel.so
-odm/lib/rfsa/adsp/libsnpe_dsp_v65_domains_v2_skel.so
-odm/lib/rfsa/adsp/libsnpe_dsp_v66_domains_v2_skel.so
-odm/lib/rfsa/adsp/libsnpe_dsp_v68_domains_v3_skel.so
-odm/lib/rfsa/adsp/libtfadsp_sb4_0_rx.so
-odm/lib/rfsa/adsp/libtfadsp_sb4_0_tx.so
-odm/lib/rfsa/adsp/libvdblurless_5.9.21_skel.so
-odm/lib/rfsa/adsp/libvdblurless_skel.so
-odm/lib/rfsa/adsp/libVDHexagonBlurless_v2_skel.so
-odm/lib/rfsa/adsp/libvdsuperphoto_3.12.30_skel.so
-odm/lib/rfsa/adsp/nlc_bgth_v1_5.so
 
 # ANT+ firmware
 odm/vendor/firmware/antdtx.b00
@@ -927,6 +907,7 @@ odm/lib64/libancbase_rt_bokeh.so;FIX_SONAME
 odm/lib64/libancbase_segment.so
 odm/lib64/libaps_frame_registration.so
 odm/lib64/libapsdarksight.so
+odm/lib64/libsymphony-cpu.so
 odm/lib64/libapsexif.so
 odm/lib64/libapsjpeg.so
 odm/lib64/libapspng.so
@@ -962,11 +943,11 @@ odm/lib64/libhwconfigurationutil.so
 odm/lib64/libimgClarityEvaluate.so
 odm/lib64/libmpbase.so
 odm/lib64/libmsnativefilter.so
-odm/lib64/liboplus_service.so
+vendor/lib64/libofflinelog.so
 odm/lib64/liboplus-uah-client.so
 odm/lib64/libOplusSecurity.so
-odm/lib64/liboplusvibratoreffect.so
 odm/lib64/liboplusblur_capture_api.so
+odm/lib64/liboplusvibratoreffect.so;MODULE_SUFFIX=-vendor
 odm/lib64/libosie_process.so
 odm/lib64/libosie_stub.so
 odm/lib64/libpngwrapper.so
@@ -1164,58 +1145,8 @@ vendor/etc/display/qdcm_calib_data_vtdr6130_amoled_qsync_cmd_mode_dsi_visionox_p
 vendor/etc/display/qdcm_calib_data_vtdr6130_amoled_qsync_video_mode_dsi_visionox_panel_with_DSC.json
 vendor/etc/display/qdcm_calib_data_vtdr6130_amoled_video_mode_dsi_visionox_panel_with_DSC.json
 
-# Display (Features)
-odm/etc/init/hw/init.oplus.display.rc
-vendor/bin/feature_enabler_client
-vendor/etc/init/feature_enabler_client.rc
-
 # Display (HDR)
-vendor/lib64/libhdr_tm.so
 vendor/lib64/libhdr_stub.so
-
-# Display (HWC)
-vendor/bin/hw/vendor.qti.hardware.display.composer-service;DISABLE_DEPS;REQUIRED=vendor.qti.hardware.display.composer-service.rc,vendor.qti.hardware.display.composer-service.xml
-vendor/bin/qdcmss
-vendor/etc/init/qdcmss.rc
-vendor/etc/snapdragon_color_libs_config.xml
-vendor/lib64/libdisplayconfig.qti.so
-vendor/lib64/libdpp_manager.so
-vendor/lib64/libdpps.so
-vendor/lib64/libhistogram.so
-vendor/lib64/libmemutils.so
-vendor/lib64/libqdcm-algo.so
-vendor/lib64/libqdcm-json-mode-parser.so
-vendor/lib64/libqdcm-mode-parser.so
-vendor/lib64/libqdutils.so
-vendor/lib64/libsdmcore.so
-vendor/lib64/libsdmdal.so
-vendor/lib64/libsdmutils.so
-vendor/lib64/libsnapdragoncolor-manager.so
-vendor/lib64/libsnapdragoncolor-qdcm.so
-vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
-
-# Display (SDM)
-vendor/etc/display/DPU660.xml
-vendor/etc/display/DPU10__.xml
-vendor/etc/display/DPU9__.xml
-vendor/etc/display/advanced_sf_offsets.xml
-vendor/etc/display/thermallevel_to_fps.xml
-vendor/etc/clstc_config_library.xml
-vendor/lib64/libdigital-dimming.so
-vendor/lib64/libdisplayqos.so
-vendor/lib64/libdisplayskuutils.so
-vendor/lib64/libintervmipc.so
-vendor/lib64/libqrtrclient.so
-vendor/lib64/libqseed3.so
-vendor/lib64/librcmask.so
-vendor/lib64/libsdedrm.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-colormgr-algo.so
-vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmextension.so
-vendor/lib64/libtestutils.so
-vendor/lib64/libtinyxml2_1.so
-vendor/lib64/libvmfilexfer.so
 
 # Display (Pixelworks)
 odm/lib64/vendor.pixelworks.hardware.display@1.0.so;MODULE_SUFFIX=_vendor
@@ -1223,19 +1154,6 @@ odm/lib64/vendor.pixelworks.hardware.display@1.1.so;MODULE_SUFFIX=_vendor
 odm/lib64/vendor.pixelworks.hardware.display@1.2.so;MODULE_SUFFIX=_vendor
 odm/lib64/vendor.pixelworks.hardware.feature@1.0.so;MODULE_SUFFIX=_vendor
 odm/lib64/vendor.pixelworks.hardware.feature@1.1.so;MODULE_SUFFIX=_vendor
-
-# Display postprocessing
-vendor/bin/hw/vendor.qti.hardware.display.color-service
-vendor/bin/ppd
-vendor/etc/init/vendor.qti.hardware.display.color-service.rc
-vendor/lib64/libdisp-aba.so
-vendor/lib64/vendor.display.color@1.0.so
-vendor/lib64/vendor.display.color@1.1.so
-vendor/lib64/vendor.display.color@1.2.so
-vendor/lib64/vendor.display.color@1.3.so
-vendor/lib64/vendor.display.color@1.4.so
-vendor/lib64/vendor.display.color@1.5.so
-vendor/lib64/vendor.display.postproc@1.0.so
 
 # Display firmware
 vendor/firmware/dpAP_full.mbn
