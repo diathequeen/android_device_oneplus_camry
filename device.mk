@@ -12,6 +12,25 @@ PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
+# Audio
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/audio/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
+    $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    $(LOCAL_PATH)/configs/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
+    $(LOCAL_PATH)/configs/audio/bluetooth_qti_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_qti_audio_policy_configuration.xml \
+    $(LOCAL_PATH)/configs/audio/sku_blair/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_blair/audio_policy_configuration.xml \
+    $(LOCAL_PATH)/configs/audio/sku_blair/mixer_paths_blair_mtp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_blair/mixer_paths_blair_mtp.xml \
+    $(LOCAL_PATH)/configs/audio/sku_blair/mixer_paths_blair_mtp_usbc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_blair/mixer_paths_blair_mtp_usbc.xml \
+    $(LOCAL_PATH)/configs/audio/sku_blair/mixer_paths_blair_qrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_blair/mixer_paths_blair_qrd.xml \
+    $(LOCAL_PATH)/configs/audio/sku_blair/resourcemanager_blair_mtp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_blair/resourcemanager_blair_mtp.xml \
+    $(LOCAL_PATH)/configs/audio/sku_blair/resourcemanager_blair_mtp_usbc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_blair/resourcemanager_blair_mtp_usbc.xml \
+    $(LOCAL_PATH)/configs/audio/sku_blair/resourcemanager_blair_qrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_blair/resourcemanager_blair_qrd.xml \
+    $(LOCAL_PATH)/configs/audio/sku_blair_qssi/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_blair_qssi/audio_policy_configuration.xml
+
+# Init
+PRODUCT_PACKAGES += \
+    init.device.rc
+
 # Display
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display/displayconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946716506123905.xml
