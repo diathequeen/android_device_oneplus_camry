@@ -833,6 +833,7 @@ odm/etc/vintf/manifest/manifest_oplus_cammidasservice.xml
 odm/etc/vintf/manifest/manifest_oplus_sendextcamcmd.xml
 odm/lib64/camera/components/com.oplus.node.preview.so
 odm/lib64/camera/components/com.oplus.node.videoenhance.so
+odm/lib64/libVideoEnhance.so
 odm/lib64/camera/com.qti.flash.sc6607.so
 odm/lib64/camera/com.qti.sensor.gc02m1b.23071.so
 odm/lib64/camera/com.qti.sensor.imx882.so
@@ -851,10 +852,15 @@ odm/lib64/camera/fdconfigvideolite.bin
 odm/lib64/camera/revision.txt
 odm/lib64/hw/audio.binaural_record.default.so
 odm/lib64/hw/audio.virtual.default.so
+odm/lib64/vendor.oplus.hardware.virtual_device.audio-impl.so
+odm/lib64/vendor.oplus.hardware.virtual_device.audio-V1-ndk.so
 odm/lib64/hw/vendor.oplus.hardware.binaural_record-impl.so
+odm/lib64/vendor.oplus.hardware.binaural_record-V1-ndk.so
+odm/lib64/libbinaural_record_session_aidl.so
 odm/lib64/lib2DSlender.so
 odm/lib64/libAlgoInterface.so
 odm/lib64/libAlgoProcess.so
+odm/lib64/libosenseaidlhalclient.so
 odm/lib64/libAncFilter.so
 odm/lib64/libAncHumanDoubleExposure.so
 odm/lib64/libAncHumanRetain.so
@@ -971,6 +977,9 @@ odm/lib64/libwrapper_te.so
 odm/lib64/libyuvwrapper.so
 odm/lib64/vendor.oplus.hardware.camera_rfi-V1-service-impl.so
 odm/lib64/vendor.oplus.hardware.sendextcamcmd-V1-service-impl.so
+odm/lib64/libSonyIMX471RmscLibrary.so
+odm/lib64/libfcell.so
+odm/lib64/libGCore4Cell.so
 vendor/bin/hw/vendor.qti.camera.provider-service_64
 vendor/etc/init/vendor.qti.camera.provider-service_64.rc
 vendor/etc/vintf/manifest/vendor.qti.camera.postproc-impl.xml
@@ -1026,8 +1035,17 @@ vendor/lib64/camera/components/com.qtistatic.stats.af.so
 vendor/lib64/camera/components/com.qtistatic.stats.awb.so
 vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so
 vendor/lib64/camera/components/libdepthmapwrapper_secure.so
+vendor/lib64/libcamximageformatutils.so
+vendor/lib64/libcamxswispiqmodule.so
 vendor/lib64/camera/camx_buildbins
 vendor/lib64/hw/camera.qcom.so
+vendor/lib64/libcamxstatscore.so
+vendor/lib64/libofflinedump.so
+vendor/lib64/libcamxfdengine.so
+vendor/lib64/libcamera_nn_stub.so
+vendor/lib64/libcamxfdalgo.so
+vendor/lib64/libcamxfacialfeatures.so
+vendor/lib64/libolc_vnd.so
 vendor/lib64/hw/com.qti.chi.override.so;DISABLE_DEPS
 vendor/lib64/camx.device-impl.so
 vendor/lib64/camx.provider-impl.so
@@ -1080,7 +1098,9 @@ vendor/lib64/libcolor-default.so
 vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libembmsservice.so
 vendor/lib64/libengineplugin.so
+vendor/lib64/liblocdiagiface.so
 vendor/lib64/libesesbprovision.so
+vendor/lib64/hw/libEseUtils.so
 vendor/lib64/libipebpsstriping.so
 vendor/lib64/libipebpsstriping170.so
 vendor/lib64/libjni_aidenoiserutil.so
@@ -1149,15 +1169,16 @@ vendor/etc/display/qdcm_calib_data_vtdr6130_amoled_video_mode_dsi_visionox_panel
 vendor/lib64/libhdr_stub.so
 
 # Display (Pixelworks)
-odm/lib64/vendor.pixelworks.hardware.display@1.0.so;MODULE_SUFFIX=_vendor
-odm/lib64/vendor.pixelworks.hardware.display@1.1.so;MODULE_SUFFIX=_vendor
-odm/lib64/vendor.pixelworks.hardware.display@1.2.so;MODULE_SUFFIX=_vendor
-odm/lib64/vendor.pixelworks.hardware.feature@1.0.so;MODULE_SUFFIX=_vendor
-odm/lib64/vendor.pixelworks.hardware.feature@1.1.so;MODULE_SUFFIX=_vendor
+odm/lib64/vendor.pixelworks.hardware.display@1.0.so
+odm/lib64/vendor.pixelworks.hardware.display@1.1.so
+odm/lib64/vendor.pixelworks.hardware.display@1.2.so
+odm/lib64/vendor.pixelworks.hardware.feature@1.0.so
+odm/lib64/vendor.pixelworks.hardware.feature@1.1.so
 
 # Display firmware
 vendor/firmware/dpAP_full.mbn
 vendor/firmware/dpAP_mini.mbn
+vendor/firmware/dpMSA.mbn
 
 # Fingerprint firmware
 odm/vendor/firmware/uff_jv.b00
@@ -1290,6 +1311,15 @@ odm/firmware/tp/22111/libIfp.so
 odm/firmware/tp/22111/sys_touch_algo_feature_config.xml
 odm/firmware/tp/22111/sys_touch_function_feature_config.xml
 
+# IPA firmware
+vendor/firmware/ipa_fws.b00
+vendor/firmware/ipa_fws.b01
+vendor/firmware/ipa_fws.b02
+vendor/firmware/ipa_fws.b03
+vendor/firmware/ipa_fws.b04
+vendor/firmware/ipa_fws.elf
+vendor/firmware/ipa_fws.mdt
+
 # UFS firmware
 odm/firmware/ufs/MICRON-MT128GAXAU2U22.bin
 odm/firmware/ufs/SAMSUNG-KLUDG4UHDC-B0E1.bin
@@ -1311,6 +1341,26 @@ vendor/firmware/vpu20_1v.mbn
 vendor/firmware/vpu20_1v_unsigned.mbn
 vendor/firmware/vpu20_4v.mbn
 vendor/firmware/vpu20_4v_unsigned.mbn
+
+# Venus firmware
+vendor/firmware/venus.mbn
+vendor/firmware/venus_4mb.mbn
+vendor/firmware/venus_4mb_ecdsa.mbn
+vendor/firmware/venus_4mb_unsigned.mbn
+vendor/firmware/venus_4mb_v6.mbn
+vendor/firmware/venus_4mb_v6_rsa.mbn
+vendor/firmware/venus_4mb_v7.mbn
+vendor/firmware/venus_5mb.mbn
+vendor/firmware/venus_5mb_ecdsa.mbn
+vendor/firmware/venus_5mb_unsigned.mbn
+vendor/firmware/venus_5mb_v6.mbn
+vendor/firmware/venus_5mb_v6_rsa.mbn
+vendor/firmware/venus_5mb_v7.mbn
+vendor/firmware/venus_ecdsa.mbn
+vendor/firmware/venus_unsigned.mbn
+vendor/firmware/venus_v6.mbn
+vendor/firmware/venus_v6_rsa.mbn
+vendor/firmware/venus_v7.mbn
 
 # WiFi
 odm/etc/wifi/bdwlan.bin
