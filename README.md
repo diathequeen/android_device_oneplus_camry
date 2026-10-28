@@ -22,12 +22,12 @@ mka bacon
 *A vendor tree should generate.*
 
 ## ***Simple reminder y'all***
-All `vendor/oneplus/camry` errors (e.g. `undefined dependency`, `partitions are different !(odm) !(vendor)`) means *you need to apply fixes to changes you made inside* `device/oneplus/camry`, especially `proprietary-files.txt` or `proprietary-firmware.txt` that `extract-files.py` *parses* to *generate vendor tree*. Every error that doesn't mention vendor must be having problems with BoardConfig.mk or device.mk.
+All `vendor/oneplus/camry` errors (e.g. `undefined dependency`, `partitions are different (odm) != (vendor)`) means *you need to apply fixes to changes you made inside* `device/oneplus/camry`, especially `proprietary-files.txt` or `proprietary-firmware.txt` that `extract-files.py` *parses* to *generate vendor tree*. Every error that doesn't mention vendor must be having problems with BoardConfig.mk or device.mk.
 
 ### When using extract-files.py
 Note that it generates `vendor/oneplus/sm6375-common` too - don't forget to use these two together to patch, commit and fix.
 
-## Don't forget cloning Custom HALs (thanks to spring repo)
+## Don't forget cloning Custom HALs (thanks to [spring](https://github.com/spring4ever) repo)
 ```
 # Custom HALs
 rm -rf hardware/qcom-caf/common
