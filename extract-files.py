@@ -19,7 +19,7 @@ from extract_utils.main import (
 
 namespace_imports = [
     'hardware/oplus',
-    'hardware/qcom-caf/sm6375-6.1',
+    'hardware/qcom-caf/sm6375-blair',
     'vendor/oneplus/sm6375-common',
     'vendor/qcom/opensource/commonsys-intf/display',
 ]
