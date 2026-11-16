@@ -895,6 +895,7 @@ odm/lib64/hw/audio.binaural_record.default.so
 odm/lib64/hw/audio.virtual.default.so
 odm/lib64/hw/vendor.oplus.hardware.binaural_record-impl.so
 odm/lib64/soundfx/liboppo_audiox_sw_effects.so
+odm/lib64/liboppo_audiox.so
 odm/lib64/lib2DSlender.so
 odm/lib64/libAlgoInterface.so
 odm/lib64/libAlgoProcess.so
@@ -1013,7 +1014,6 @@ odm/lib64/libstfaceunlockocl.so
 odm/lib64/libstfd_mobile_api.so
 odm/lib64/libsymphony-cpu.so
 odm/lib64/libtensorflowlite_oplus.so
-odm/lib64/libtfavib.so
 odm/lib64/libwatermark_photo.so
 odm/lib64/libwrapper_te.so
 odm/lib64/libyuvwrapper.so
