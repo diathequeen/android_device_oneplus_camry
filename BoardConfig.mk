@@ -18,11 +18,5 @@ TARGET_OTA_ASSERT_DEVICE := OP5D49L1
 # Display
 TARGET_SCREEN_DENSITY := 395
 
-# Prebuilts
-TARGET_FORCE_PREBUILT_KERNEL := true
-ifeq ($(TARGET_FORCE_PREBUILT_KERNEL),true)
-include device/oneplus/camry-kernel/BoardConfig.mk
-endif
-
 # Include the proprietary files BoardConfig.
 include vendor/oneplus/camry/BoardConfigVendor.mk
